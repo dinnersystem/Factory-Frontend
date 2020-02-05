@@ -23,7 +23,7 @@ namespace FactoryClient
         {
             JArray data = req.Get_Dish() ,real = new JArray();
             foreach (JToken item in data)
-                if (item["department"]["factory"]["name"].ToString() == req.uname)
+                if (item["department"]["factory"]["boss_id"].ToString() == req.user_id)
                     real.Add(item);
 
             int sum = real.Count;

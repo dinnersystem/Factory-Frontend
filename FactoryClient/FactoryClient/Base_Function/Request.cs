@@ -18,6 +18,7 @@ namespace FactoryClient
     {
         string cookieHeader;
         public string uname = "";
+        public string user_id = "";
         public List<string> valid_opers = new List<string>();
         static string host = Properties.Settings.Default.remote_host;
 
@@ -42,6 +43,7 @@ namespace FactoryClient
                 able |= (item.ToString(Newtonsoft.Json.Formatting.None) == "\"select_other\"");
                 valid_opers.Add(item.ToString(Newtonsoft.Json.Formatting.None));
             }
+            user_id = obj["id"].ToString();
             uname = obj["name"].ToString();
             if (!able) throw new Exception("Access denied");
         }
