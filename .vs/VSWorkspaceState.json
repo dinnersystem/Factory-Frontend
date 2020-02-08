@@ -1,10 +1,6 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\FactoryClient",
-    "\\FactoryClient\\FactoryClient",
-    "\\FactoryClient\\FactoryClient\\Normal_Function"
+    ""
   ],
-  "SelectedNode": "\\FactoryClient\\FactoryClient\\Normal_Function\\Update_Program.cs",
   "PreviewInSolutionExplorer": false
 }
