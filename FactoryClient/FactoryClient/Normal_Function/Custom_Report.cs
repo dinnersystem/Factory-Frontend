@@ -30,7 +30,7 @@ namespace FactoryClient
             
             foreach (JToken item in dish_respond)
             {
-                if (item["department"]["factory"]["name"].ToString(Newtonsoft.Json.Formatting.None) != "\"" + req.uname + "\"") continue;
+                if (item["department"]["factory"]["boss_id"].ToString(Newtonsoft.Json.Formatting.None) != "\"" + req.user_id + "\"") continue;
                 if (item["is_idle"].ToString(Newtonsoft.Json.Formatting.None) == "\"1\"") continue;
                 did_to_cordinate[item["dish_id"].ToObject<int>()] = counter;
                 excel.Write(1, counter, item["dish_name"].ToString(Newtonsoft.Json.Formatting.None).Replace("\"" ,""));

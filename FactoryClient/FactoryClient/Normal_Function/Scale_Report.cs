@@ -26,7 +26,7 @@ namespace FactoryClient
             JArray dish_respond = req.Get_Dish();
             foreach (JToken item in dish_respond)
             {
-                if (item["department"]["factory"]["name"].ToString(Newtonsoft.Json.Formatting.None) != "\"" + req.uname + "\"") continue;
+                if (item["department"]["factory"]["boss_id"].ToString(Newtonsoft.Json.Formatting.None) != "\"" + req.user_id + "\"") continue;
                 if (item["is_idle"].ToString(Newtonsoft.Json.Formatting.None) == "\"1\"") continue;
                 dish[item["dish_id"].ToObject<int>()] = item["dish_name"].ToString() + "(" + item["dish_cost"].ToString() + "$.)";
                 department[item["department"]["id"].ToObject<int>()] = item["department"]["name"].ToString();
