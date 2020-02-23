@@ -27,11 +27,14 @@ namespace FactoryClient
 
             int counter = 5;
             Dictionary<int, int> did_to_cordinate = new Dictionary<int, int>();
+            List<string> dishIDs = new List<string>();
             
             foreach (JToken item in dish_respond)
             {
                 if (item["department"]["factory"]["boss_id"].ToString(Newtonsoft.Json.Formatting.None) != "\"" + req.user_id + "\"") continue;
                 if (item["is_idle"].ToString(Newtonsoft.Json.Formatting.None) == "\"1\"") continue;
+                if (item["department"]["factory"]["allow_custom"].ToString(Newtonsoft.Json.Formatting.None) == "\"false\"") continue;
+                dishIDs.Add(item["dish_id"].ToString(Newtonsoft.Json.Formatting.None).Replace("\"", ""));
                 did_to_cordinate[item["dish_id"].ToObject<int>()] = counter;
                 excel.Write(1, counter, item["dish_name"].ToString(Newtonsoft.Json.Formatting.None).Replace("\"" ,""));
                 counter += 1;
@@ -40,6 +43,7 @@ namespace FactoryClient
             counter = 2;
             foreach (JToken item in data)
             {
+                if (!dishIDs.Contains(item["dish"][0].ToString(Newtonsoft.Json.Formatting.None).Replace("\"", ""))) continue;
                 int[] sum = new int[1000];
                 foreach (JToken dish in item["dish"])
                     sum[dish.ToObject<int>()] += 1;
@@ -51,8 +55,9 @@ namespace FactoryClient
 
                 foreach (JToken dish in dish_respond)
                 {
-                    if (dish["department"]["factory"]["name"].ToString(Newtonsoft.Json.Formatting.None) != "\"" + req.uname + "\"") continue;
+                    //if (dish["department"]["factory"]["name"].ToString(Newtonsoft.Json.Formatting.None) != "\"" + req.uname + "\"") continue;
                     if (dish["is_idle"].ToString(Newtonsoft.Json.Formatting.None) == "\"1\"") continue;
+                    if (dish["department"]["factory"]["allow_custom"].ToString(Newtonsoft.Json.Formatting.None) == "\"false\"") continue;
                     excel.Write(counter, did_to_cordinate[dish["dish_id"].ToObject<int>()], 
                         sum[dish["dish_id"].ToObject<int>()] == 0 ? "" : sum[dish["dish_id"].ToObject<int>()].ToString());
                 }

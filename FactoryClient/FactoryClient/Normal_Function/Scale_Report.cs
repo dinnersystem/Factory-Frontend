@@ -28,6 +28,7 @@ namespace FactoryClient
             {
                 if (item["department"]["factory"]["boss_id"].ToString(Newtonsoft.Json.Formatting.None) != "\"" + req.user_id + "\"") continue;
                 if (item["is_idle"].ToString(Newtonsoft.Json.Formatting.None) == "\"1\"") continue;
+                if (item["department"]["factory"]["allow_custom"].ToString(Newtonsoft.Json.Formatting.None) == "\"true\"") continue;
                 dish[item["dish_id"].ToObject<int>()] = item["dish_name"].ToString() + "(" + item["dish_cost"].ToString() + "$.)";
                 department[item["department"]["id"].ToObject<int>()] = item["department"]["name"].ToString();
                 parent[item["dish_id"].ToObject<int>()] = item["department"]["id"].ToObject<int>();
