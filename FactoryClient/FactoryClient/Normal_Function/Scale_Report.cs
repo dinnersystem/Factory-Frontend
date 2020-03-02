@@ -17,6 +17,8 @@ namespace FactoryClient
             this.excel = excel;
         }
 
+        List<string> dishIDs = new List<string>();
+
         public void Download(string l, string r ,UpdateProgress invoker)
         {
             JArray data = req.Get_Order(l.Replace("-", "/").Replace(" ", "-"), r.Replace("-", "/").Replace(" ", "-"));
@@ -24,11 +26,13 @@ namespace FactoryClient
             Dictionary<int, string> department = new Dictionary<int, string>();
             int[] parent = new int[1000];
             JArray dish_respond = req.Get_Dish();
+
             foreach (JToken item in dish_respond)
             {
                 if (item["department"]["factory"]["boss_id"].ToString(Newtonsoft.Json.Formatting.None) != "\"" + req.user_id + "\"") continue;
                 if (item["is_idle"].ToString(Newtonsoft.Json.Formatting.None) == "\"1\"") continue;
                 if (item["department"]["factory"]["allow_custom"].ToString(Newtonsoft.Json.Formatting.None) == "\"true\"") continue;
+                dishIDs.Add(item["dish_id"].ToString(Newtonsoft.Json.Formatting.None).Replace("\"", ""));
                 dish[item["dish_id"].ToObject<int>()] = item["dish_name"].ToString() + "(" + item["dish_cost"].ToString() + "$.)";
                 department[item["department"]["id"].ToObject<int>()] = item["department"]["name"].ToString();
                 parent[item["dish_id"].ToObject<int>()] = item["department"]["id"].ToObject<int>();
@@ -80,6 +84,7 @@ namespace FactoryClient
             foreach (JToken item in data)
             {
                 string did = item["dish"][0].ToString();
+                if (!dishIDs.Contains(did)) continue;
                 string cno = item["user"]["class"]["class_no"].ToString();
                 if (!ret.ContainsKey(cno)) ret[cno] = new int[1000];
                 ret[cno][Int32.Parse(did)] += 1;
