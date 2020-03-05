@@ -25,7 +25,16 @@ namespace FactoryClient.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("7")]
+        [global::System.Configuration.DefaultSettingValueAttribute("client.zip")]
+        public string remote_name {
+            get {
+                return ((string)(this["remote_name"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("11")]
         public string version {
             get {
                 return ((string)(this["version"]));
@@ -34,25 +43,16 @@ namespace FactoryClient.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://dinnersystem.com/dinnersys_beta/factory_client")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://dinnersystem.com/dinnersys_beta/factory_client")]
         public string remote_url {
             get {
                 return ((string)(this["remote_url"]));
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("client.zip")]
-        public string remote_name {
-            get {
-                return ((string)(this["remote_name"]));
-            }
-        }
-        
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://dinnersystem.com")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://ssh.dinnersystem.com")]
         public string remote_host {
             get {
                 return ((string)(this["remote_host"]));
