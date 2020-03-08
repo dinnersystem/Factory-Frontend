@@ -84,3 +84,4 @@ D:\github\Factory-Frontend\FactoryClient\FactoryClient\bin\Release\FactoryClient
 D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Release\FactoryClient.TrustInfo.xml
 D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Release\FactoryClient.exe.manifest
 D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Release\FactoryClient.application
+D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Release\FactoryClient.csprojAssemblyReference.cache
