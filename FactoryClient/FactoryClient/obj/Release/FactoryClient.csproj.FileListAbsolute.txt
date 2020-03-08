@@ -69,7 +69,6 @@ D:\github\Factory-Frontend\FactoryClient\FactoryClient\bin\Release\MathNet.Numer
 D:\github\Factory-Frontend\FactoryClient\FactoryClient\bin\Release\Newtonsoft.Json.pdb
 D:\github\Factory-Frontend\FactoryClient\FactoryClient\bin\Release\Newtonsoft.Json.xml
 D:\github\Factory-Frontend\FactoryClient\FactoryClient\bin\Release\zh-Hant\Microsoft.VisualStudio.TestTools.UITest.Extension.resources.dll
-D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Release\FactoryClient.csprojAssemblyReference.cache
 D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Release\Interop.IWshRuntimeLibrary.dll
 D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Release\FactoryClient.csproj.ResolveComReference.cache
 D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Release\FactoryClient.Form1.resources
@@ -85,3 +84,4 @@ D:\github\Factory-Frontend\FactoryClient\FactoryClient\bin\Release\FactoryClient
 D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Release\FactoryClient.TrustInfo.xml
 D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Release\FactoryClient.exe.manifest
 D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Release\FactoryClient.application
+D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Release\FactoryClient.csprojAssemblyReference.cache
