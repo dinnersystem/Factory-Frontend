@@ -28,7 +28,7 @@
     <InstallUrl>https://dinnersystem.com/dinnersys_beta/fclient/</InstallUrl>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>10</ApplicationRevision>
+    <ApplicationRevision>11</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -64,7 +64,7 @@
     <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>false</SignManifests>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
     <TargetZone>LocalIntranet</TargetZone>
@@ -82,7 +82,7 @@
     <ManifestKeyFile>FactoryClient_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <SignAssembly>false</SignAssembly>
+    <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>FactoryClient_TemporaryKey.pfx</AssemblyOriginatorKeyFile>
@@ -228,9 +228,7 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\ILAsm.4.5.1.1\build\net\ILAsm.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\ILAsm.4.5.1.1\build\net\ILAsm.targets'))" />
   </Target>
-  
 </Project>
-
 <!--
 <Target Name="AfterCompile" Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <Exec Command="&quot;C:\Program Files (x86)\Microsoft SDKs\ClickOnce\SignTool\signtool.exe&quot; sign /f &quot;$(ProjectDir)\FactoryClient_TemporaryKey.pfx&quot; /p &quot;2rjurrru&quot; /v &quot;$(ProjectDir)obj\$(ConfigurationName)\$(TargetFileName)&quot;" />

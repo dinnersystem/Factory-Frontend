@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="FactoryClient.exe" version="1.0.0.10" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="FactoryClient.exe" version="1.0.0.11" publicKeyToken="a7058d7f900ef8e2" language="neutral" processorArchitecture="msil" type="win32" />
   <description asmv2:iconFile="icon.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="FactoryClient" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="FactoryClient" version="1.0.0.0" publicKeyToken="A7058D7F900EF8E2" language="neutral" processorArchitecture="msil" />
     <commandLine file="FactoryClient.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="FactoryClient.exe" size="75776">
-      <assemblyIdentity name="FactoryClient" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="FactoryClient.exe" size="77280">
+      <assemblyIdentity name="FactoryClient" version="1.0.0.0" publicKeyToken="A7058D7F900EF8E2" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>XdlB1SYu24D1pV6CLnKXWydXFWre/+KhBZoAnxwgs3A=</dsig:DigestValue>
+        <dsig:DigestValue>+svXnPLw7qeKB6JYBnG2eg9lEZm/9Dv3d08XjCvzQCk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -149,4 +149,4 @@
       <!--<supportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}" />-->
     </application>
   </compatibility>
-</asmv1:assembly>
+<publisherIdentity name="CN=DESKTOP-A9HSDPI\lawre" issuerKeyHash="2a6a28a1b0755af2c9537426a0d4c407e37675b9" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>tx/powS7gvrgABSDGwqoPtx4AlaIlzPQ1dDBWjDhJ08=</DigestValue></Reference></SignedInfo><SignatureValue>Y0O7XR1w60iJUw6/AxCgtPJkCf1U7aC4m3hFKU7FB2jJBZGtOclpm47qlXbdTssZZYRB8vH2N/FQbWqKI8o+GYbaqLDyYqTHedthBSmlFtt1Gn3HlAmw/QNQ4sCrNlp2SPAwn/RmsJQpTDSt2CNVvPIzOY4c+/dYUa4mQkSTZw0=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>8UA3meyJu6MiZ2nhfMXC+fEctzeG1T3nmHgkjO/r/QGQMMvxOv6c1dlo0fjymnGKhPxIdbyF8GyBtv7e+eqQioHkrilinDJUu+vmebJUBp9QXlAd2Z4WEeVNez14UpG3dS3xzCgEXIQXrArgKjJ/O54VWJOEN/d+wT/qqDX77uk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="4f27e1305ac1d0d5d0339788560278dc3ea80a1b831400e0fa82bb04a3e91fb7" Description="" Url=""><as:assemblyIdentity name="FactoryClient.exe" version="1.0.0.11" publicKeyToken="a7058d7f900ef8e2" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DESKTOP-A9HSDPI\lawre</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>5KmYigATKd/UUbyhte+0abLCgMtb5CfnCvdupTKOXuY=</DigestValue></Reference></SignedInfo><SignatureValue>K4rXfn7rdnPNucOFSJXJCGvRp8xfcd1SR5aCiETjXaRBoNf/XvIVUYqY8zkyrcUuORmF0dKC0159U35KwEHMhWrzRMdPB3rYueXUNTuWy5DrIq2YOYxyIIDxJUQ72q2FNGy0ARb//FiErT4bzgdUMEF0fwKdN3PnaDGLS409qb0=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>8UA3meyJu6MiZ2nhfMXC+fEctzeG1T3nmHgkjO/r/QGQMMvxOv6c1dlo0fjymnGKhPxIdbyF8GyBtv7e+eqQioHkrilinDJUu+vmebJUBp9QXlAd2Z4WEeVNez14UpG3dS3xzCgEXIQXrArgKjJ/O54VWJOEN/d+wT/qqDX77uk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB7TCCAVagAwIBAgIQOqwvUKnYBJFMWmxpOvVMwTANBgkqhkiG9w0BAQsFADA1MTMwMQYDVQQDHioARABFAFMASwBUAE8AUAAtAEEAOQBIAFMARABQAEkAXABsAGEAdwByAGUwHhcNMTkwNDEzMTQyNzEwWhcNMjAwNDEyMjAyNzEwWjA1MTMwMQYDVQQDHioARABFAFMASwBUAE8AUAAtAEEAOQBIAFMARABQAEkAXABsAGEAdwByAGUwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAPFAN5nsibujImdp4XzFwvnxHLc3htU955h4JIzv6/0BkDDL8Tr+nNXZaNH48ppxioT8SHW8hfBsgbb+3vnqkIqB5K4pYpwyVLvr5nmyVAafUF5QHdmeFhHlTXs9eFKRt3Ut8cwoBFyEF6wK4CoyfzueFViThDf3fsE/6qg1++7pAgMBAAEwDQYJKoZIhvcNAQELBQADgYEAocrJDQwiX3SPSd6RuwCKicK5gJ7gOZrMylS8vjAkQirvQqwjtuFmSAL2tIs1MaSsAqjW0opG3rNIcTIIuvCgwvH/1fKRc8XSD7uOqwnxPsKd4Ot9zIrAuJXMNottIH5Lx2vXu8AXEbkXq4CeimhaoPh6j58gVFBgH7eXdGsOqew=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
