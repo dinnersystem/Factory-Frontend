@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3934EB6D-B313-48B3-B83D-DA2B8A979ADB}</ProjectGuid>
+    <ProjectGuid>{D811EC37-E2E3-499F-93FD-51D83F438B67}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>FactoryClient</RootNamespace>
     <AssemblyName>FactoryClient</AssemblyName>
@@ -24,7 +24,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>https://dinnersystem.com/dinnersys_beta/fclient/</InstallUrl>
-    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationRevision>1</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -50,7 +50,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>A3C74E7114CEAAAB40F8E72DB406E370BFF29E07</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>341B1BA3E81D8E7CE6DCAA97E92EEEE3268F96D4</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestKeyFile>FactoryClient_TemporaryKey.pfx</ManifestKeyFile>
@@ -62,12 +62,6 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -99,7 +93,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="FactoryClient_TemporaryKey.pfx" />
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
