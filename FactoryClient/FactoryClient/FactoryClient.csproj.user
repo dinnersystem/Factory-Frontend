@@ -1,16 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <PublishUrlHistory>publish\|ftp://192.168.0.2/fclient/|ftp://192.168.0.2/FTP/fclient/</PublishUrlHistory>
-    <InstallUrlHistory>https://dinnersystem.com/dinnersys_beta/fclient/|http://192.168.0.2/FTP/fclient/</InstallUrlHistory>
+    <PublishUrlHistory>publish\</PublishUrlHistory>
+    <InstallUrlHistory>https://dinnersystem.com/dinnersys_beta/fclient/</InstallUrlHistory>
     <SupportUrlHistory />
     <UpdateUrlHistory />
     <BootstrapperUrlHistory />
     <ErrorReportUrlHistory />
     <FallbackCulture>en-US</FallbackCulture>
     <VerifyUploadedFiles>false</VerifyUploadedFiles>
-  </PropertyGroup>
-  <PropertyGroup>
-    <EnableSecurityDebugging>false</EnableSecurityDebugging>
   </PropertyGroup>
 </Project>
