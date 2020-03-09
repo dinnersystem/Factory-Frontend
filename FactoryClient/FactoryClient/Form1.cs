@@ -16,6 +16,7 @@ namespace FactoryClient
     public partial class Form1 : Form
     {
         Request req;
+        Normal_Function.Download_Template template = new Normal_Function.Download_Template();
         public Form1(Request req)
         {
             InitializeComponent();
@@ -69,6 +70,7 @@ namespace FactoryClient
             {
                 try
                 {
+                    template.Non_Override_Download(menu_file.Text);
                     ExcelStream excel = new ExcelStream(menu_file.Text, sender.Equals(download_menu));
                     Update_Menu menu_update = new Update_Menu(req, excel);
                     UpdateProgress progress = new UpdateProgress((int value) =>
@@ -114,6 +116,7 @@ namespace FactoryClient
             {
                 try
                 {
+                    template.Non_Override_Download(scale_file.Text);
                     ExcelStream excel = new ExcelStream(scale_file.Text);
                     Scale_Report scale = new Scale_Report(req, excel);
                     scale.Download(scale_start.Value.ToString("yyyy-MM-dd HH:mm:ss"),
@@ -155,6 +158,7 @@ namespace FactoryClient
             {
                 try
                 {
+                    template.Non_Override_Download(custom_file.Text);
                     ExcelStream excel = new ExcelStream(custom_file.Text);
                     Custom_Report custom_update = new Custom_Report(req, excel);
                     custom_update.Download(custom_start.Value.ToString("yyyy-MM-dd HH:mm:ss"),
@@ -196,6 +200,7 @@ namespace FactoryClient
             {
                 try
                 {
+                    template.Non_Override_Download(money_file.Text);
                     ExcelStream excel = new ExcelStream(money_file.Text, false);
                     Money_Report money_update = new Money_Report(req, excel);
                     money_update.Download(money_start.Value.ToString("yyyy-MM-dd HH:mm:ss"),
