@@ -13,3 +13,5 @@ D:\github\Factory-Frontend\FactoryClient\FactoryClient\bin\Debug\FactoryClient.e
 D:\github\Factory-Frontend\FactoryClient\FactoryClient\bin\Debug\FactoryClient.application
 D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Debug\FactoryClient.exe.manifest
 D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Debug\FactoryClient.application
+D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Debug\FactoryClient.Form1.resources
+D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Debug\FactoryClient.Login.resources
