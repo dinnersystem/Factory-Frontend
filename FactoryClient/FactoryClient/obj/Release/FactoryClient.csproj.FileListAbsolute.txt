@@ -14,3 +14,4 @@ D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Release\午餐系統.
 D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Release\午餐系統.application
 D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Release\午餐系統.exe
 D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Release\午餐系統.pdb
+D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Release\FactoryClient.csprojAssemblyReference.cache

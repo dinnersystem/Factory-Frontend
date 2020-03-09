@@ -16,32 +16,15 @@ namespace FactoryClient
     public partial class Form1 : Form
     {
         Request req;
-        Update_Program updater;
         public Form1(Request req)
         {
             InitializeComponent();
             this.FormClosing += Form_Closing;
-
             this.req = req;
             user.Text = "現在廠商為: " + req.uname;
-            updater = new Update_Program(req);
-            if (updater.Updatable)
-            {
-                MessageBox.Show("請更新前端");
-                foreach (Control control in Controls)
-                {
-                    if (control == Other) continue;
-                    PropertyInfo prop = control.GetType().GetProperty("Enabled");
-                    if (prop != null) Compatible_Extend.PropertyInfo_Extend.SetValue(prop ,control, false);
-                }
-            }
-            else update.Enabled = false;
         }
 
-        private void Form_Closing(object sender, FormClosingEventArgs e)
-        {
-            System.Diagnostics.Process.GetCurrentProcess().Kill();
-        }
+        private void Form_Closing(object sender, FormClosingEventArgs e) { Process.GetCurrentProcess().Kill(); }
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -237,40 +220,6 @@ namespace FactoryClient
                         original();
                         Error_Report.Text += ex.Message + "\r\n ----------- \r\n";
                     }));
-                }
-            });
-        }
-
-        private void update_Click(object sender, EventArgs e)
-        {
-            void original()
-            {
-                update.Enabled = true;
-                Update_Progress_Show.Text = "目前進度:0%";
-                Update_Progress.Value = 0;
-            }
-
-            update.Enabled = false;
-            Compatible_Extend.Task_Extend.Run(() =>
-            {
-                if (updater.Updatable)
-                {
-                    updater.Update((int value) =>
-                    {
-                        Invoke((MethodInvoker)(() =>
-                        {
-                            Update_Progress_Show.Text = "目前進度:" + value.ToString() + "%";
-                            Update_Progress.Value = value;
-                        }));
-                    });
-                    Invoke((MethodInvoker)(() => original()));
-                    MessageBox.Show("成功更新，重新啟動前端");
-                    updater.Finish();
-                }
-                else
-                {
-                    MessageBox.Show("無須更新");
-                    Invoke((MethodInvoker)(() => original()));
                 }
             });
         }

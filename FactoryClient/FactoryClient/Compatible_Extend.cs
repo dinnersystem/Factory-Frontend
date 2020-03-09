@@ -2,21 +2,22 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
+using System.Reflection;
+using System.Windows.Forms;
 
 namespace Compatible_Extend
 {
     class Task_Extend
     {
-        public static void Run(Action o) { }
+        public static void Run(Action o) { new Thread(new ThreadStart(o)).Start();  }
     }
-
-    class PropertyInfo_Extend
-    {
-        public static void SetValue(object a, object b, object c) { }
-    } 
 
     class WebUtility_Extend
     {
-        public static string UrlEncode(object e) { return "";  }
+        public static string UrlEncode(string s) {
+            string str = Uri.EscapeDataString(s);
+            return Uri.EscapeDataString(s);
+        }
     }
 }

@@ -66,10 +66,6 @@
             this.money_end = new System.Windows.Forms.DateTimePicker();
             this.money_start = new System.Windows.Forms.DateTimePicker();
             this.download_money = new System.Windows.Forms.Button();
-            this.Other = new System.Windows.Forms.GroupBox();
-            this.Update_Progress_Show = new System.Windows.Forms.Label();
-            this.Update_Progress = new System.Windows.Forms.ProgressBar();
-            this.update = new System.Windows.Forms.Button();
             this.user = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.logout = new System.Windows.Forms.Button();
@@ -79,7 +75,6 @@
             this.Scale.SuspendLayout();
             this.Custom.SuspendLayout();
             this.Money.SuspendLayout();
-            this.Other.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -121,7 +116,7 @@
             // Menu_Progress
             // 
             this.Menu_Progress.Location = new System.Drawing.Point(87, 77);
-            this.Menu_Progress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Menu_Progress.Margin = new System.Windows.Forms.Padding(2);
             this.Menu_Progress.Name = "Menu_Progress";
             this.Menu_Progress.Size = new System.Drawing.Size(235, 17);
             this.Menu_Progress.TabIndex = 5;
@@ -185,7 +180,7 @@
             // Scale_Progress
             // 
             this.Scale_Progress.Location = new System.Drawing.Point(89, 106);
-            this.Scale_Progress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Scale_Progress.Margin = new System.Windows.Forms.Padding(2);
             this.Scale_Progress.Name = "Scale_Progress";
             this.Scale_Progress.Size = new System.Drawing.Size(235, 17);
             this.Scale_Progress.TabIndex = 7;
@@ -285,7 +280,7 @@
             // Custom_Progress
             // 
             this.Custom_Progress.Location = new System.Drawing.Point(87, 114);
-            this.Custom_Progress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Custom_Progress.Margin = new System.Windows.Forms.Padding(2);
             this.Custom_Progress.Name = "Custom_Progress";
             this.Custom_Progress.Size = new System.Drawing.Size(235, 17);
             this.Custom_Progress.TabIndex = 9;
@@ -395,7 +390,7 @@
             // Money_Progress
             // 
             this.Money_Progress.Location = new System.Drawing.Point(87, 106);
-            this.Money_Progress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Money_Progress.Margin = new System.Windows.Forms.Padding(2);
             this.Money_Progress.Name = "Money_Progress";
             this.Money_Progress.Size = new System.Drawing.Size(235, 17);
             this.Money_Progress.TabIndex = 11;
@@ -454,49 +449,6 @@
             this.download_money.UseVisualStyleBackColor = true;
             this.download_money.Click += new System.EventHandler(this.download_money_Click);
             // 
-            // Other
-            // 
-            this.Other.Controls.Add(this.Update_Progress_Show);
-            this.Other.Controls.Add(this.Update_Progress);
-            this.Other.Controls.Add(this.update);
-            this.Other.Location = new System.Drawing.Point(347, 458);
-            this.Other.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Other.Name = "Other";
-            this.Other.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Other.Size = new System.Drawing.Size(308, 97);
-            this.Other.TabIndex = 13;
-            this.Other.TabStop = false;
-            this.Other.Text = "其他功能";
-            // 
-            // Update_Progress_Show
-            // 
-            this.Update_Progress_Show.AutoSize = true;
-            this.Update_Progress_Show.Location = new System.Drawing.Point(4, 69);
-            this.Update_Progress_Show.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Update_Progress_Show.Name = "Update_Progress_Show";
-            this.Update_Progress_Show.Size = new System.Drawing.Size(71, 12);
-            this.Update_Progress_Show.TabIndex = 13;
-            this.Update_Progress_Show.Text = "目前進度:0%";
-            // 
-            // Update_Progress
-            // 
-            this.Update_Progress.Location = new System.Drawing.Point(84, 64);
-            this.Update_Progress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Update_Progress.Name = "Update_Progress";
-            this.Update_Progress.Size = new System.Drawing.Size(219, 17);
-            this.Update_Progress.TabIndex = 2;
-            // 
-            // update
-            // 
-            this.update.Location = new System.Drawing.Point(7, 26);
-            this.update.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.update.Name = "update";
-            this.update.Size = new System.Drawing.Size(296, 28);
-            this.update.TabIndex = 1;
-            this.update.Text = "更新程式";
-            this.update.UseVisualStyleBackColor = true;
-            this.update.Click += new System.EventHandler(this.update_Click);
-            // 
             // user
             // 
             this.user.AutoSize = true;
@@ -511,10 +463,10 @@
             // 
             this.groupBox1.Controls.Add(this.logout);
             this.groupBox1.Controls.Add(this.user);
-            this.groupBox1.Location = new System.Drawing.Point(347, 360);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Location = new System.Drawing.Point(346, 460);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(308, 94);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
@@ -523,7 +475,7 @@
             // logout
             // 
             this.logout.Location = new System.Drawing.Point(6, 54);
-            this.logout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.logout.Margin = new System.Windows.Forms.Padding(2);
             this.logout.Name = "logout";
             this.logout.Size = new System.Drawing.Size(296, 26);
             this.logout.TabIndex = 1;
@@ -535,7 +487,8 @@
             // 
             this.Error_Report.Location = new System.Drawing.Point(347, 35);
             this.Error_Report.Name = "Error_Report";
-            this.Error_Report.Size = new System.Drawing.Size(309, 320);
+            this.Error_Report.ReadOnly = true;
+            this.Error_Report.Size = new System.Drawing.Size(309, 420);
             this.Error_Report.TabIndex = 14;
             this.Error_Report.Text = "";
             this.Error_Report.TextChanged += new System.EventHandler(this.Error_Report_TextChanged);
@@ -557,7 +510,6 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.Error_Report);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.Other);
             this.Controls.Add(this.Money);
             this.Controls.Add(this.Custom);
             this.Controls.Add(this.Scale);
@@ -574,8 +526,6 @@
             this.Custom.PerformLayout();
             this.Money.ResumeLayout(false);
             this.Money.PerformLayout();
-            this.Other.ResumeLayout(false);
-            this.Other.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -622,11 +572,7 @@
         private System.Windows.Forms.ProgressBar Custom_Progress;
         private System.Windows.Forms.Label Money_Progress_Show;
         private System.Windows.Forms.ProgressBar Money_Progress;
-        private System.Windows.Forms.GroupBox Other;
-        private System.Windows.Forms.Button update;
         private System.Windows.Forms.Label user;
-        private System.Windows.Forms.Label Update_Progress_Show;
-        private System.Windows.Forms.ProgressBar Update_Progress;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button logout;
         private System.Windows.Forms.RichTextBox Error_Report;

@@ -23,7 +23,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>https://dinnersystem.com/dinnersys_beta/fclient/</InstallUrl>
-    <ApplicationRevision>8</ApplicationRevision>
+    <ApplicationRevision>10</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -100,10 +100,10 @@
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Normal_Function\Custom_Report.cs" />
+    <Compile Include="Normal_Function\Download_Template.cs" />
     <Compile Include="Normal_Function\Money_Report.cs" />
     <Compile Include="Normal_Function\Scale_Report.cs" />
     <Compile Include="Normal_Function\Update_Menu.cs" />
-    <Compile Include="Normal_Function\Update_Program.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
