@@ -130,7 +130,7 @@
             this.Controls.Add(this.id);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
-            this.Text = "Login";
+            this.Text = "幹";
             this.ResumeLayout(false);
             this.PerformLayout();
 
