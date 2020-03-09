@@ -1,5 +1,3 @@
-D:\github\Factory-Frontend\FactoryClient\FactoryClient\bin\Debug\FactoryClient.exe
-D:\github\Factory-Frontend\FactoryClient\FactoryClient\bin\Debug\FactoryClient.pdb
 D:\github\Factory-Frontend\FactoryClient\FactoryClient\bin\Debug\Newtonsoft.Json.dll
 D:\github\Factory-Frontend\FactoryClient\FactoryClient\bin\Debug\Newtonsoft.Json.xml
 D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Debug\FactoryClient.csprojAssemblyReference.cache
@@ -7,11 +5,13 @@ D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Debug\FactoryClient.P
 D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Debug\FactoryClient.csproj.GenerateResource.cache
 D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Debug\FactoryClient.csproj.CoreCompileInputs.cache
 D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Debug\FactoryClient.csproj.CopyComplete
-D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Debug\FactoryClient.exe
-D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Debug\FactoryClient.pdb
-D:\github\Factory-Frontend\FactoryClient\FactoryClient\bin\Debug\FactoryClient.exe.manifest
-D:\github\Factory-Frontend\FactoryClient\FactoryClient\bin\Debug\FactoryClient.application
-D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Debug\FactoryClient.exe.manifest
-D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Debug\FactoryClient.application
 D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Debug\FactoryClient.Form1.resources
 D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Debug\FactoryClient.Login.resources
+D:\github\Factory-Frontend\FactoryClient\FactoryClient\bin\Debug\午餐系統.exe.manifest
+D:\github\Factory-Frontend\FactoryClient\FactoryClient\bin\Debug\午餐系統.application
+D:\github\Factory-Frontend\FactoryClient\FactoryClient\bin\Debug\午餐系統.exe
+D:\github\Factory-Frontend\FactoryClient\FactoryClient\bin\Debug\午餐系統.pdb
+D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Debug\午餐系統.exe.manifest
+D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Debug\午餐系統.application
+D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Debug\午餐系統.exe
+D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Debug\午餐系統.pdb
