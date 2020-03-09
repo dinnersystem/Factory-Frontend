@@ -4,31 +4,31 @@
   <trustInfo xmlns="urn:schemas-microsoft-com:asm.v2">
     <security>
       <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
-        <!-- UAC 資訊清單選項
-             如果要變更 Windows 使用者帳戶控制層級，請將 
-             requestedExecutionLevel 節點以下列其中之一取代。
+        <!-- UAC Manifest Options
+             If you want to change the Windows User Account Control level replace the 
+             requestedExecutionLevel node with one of the following.
 
         <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
         <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
         <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
 
-            指定 requestedExecutionLevel 項目會停用檔案及登錄虛擬化。
-            如果您的應用程式需要針對回溯相容性進行這項虛擬化，請移除這個
-            項目。
+            Specifying requestedExecutionLevel element will disable file and registry virtualization. 
+            Remove this element if your application requires this virtualization for backwards
+            compatibility.
         -->
         <requestedExecutionLevel level="asInvoker" uiAccess="false" />
       </requestedPrivileges>
       <applicationRequestMinimum>
+        <PermissionSet class="System.Security.PermissionSet" version="1" Unrestricted="true" ID="Custom" SameSite="site" />
         <defaultAssemblyRequest permissionSetReference="Custom" />
-        <PermissionSet class="System.Security.PermissionSet" version="1" ID="Custom" SameSite="site" />
       </applicationRequestMinimum>
     </security>
   </trustInfo>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
     <application>
-      <!-- 此應用程式已通過測試，並設計要搭配使用的
-           應用程式版本清單。請取消註解適當元素，
-           Windows 就會自動選取最相容的環境。 -->
+      <!-- A list of the Windows versions that this application has been tested on
+           and is designed to work with. Uncomment the appropriate elements
+           and Windows will automatically select the most compatible environment. -->
       <!-- Windows Vista -->
       <!--<supportedOS Id="{e2011457-1546-43c5-a5fe-008deee3d3f0}" />-->
       <!-- Windows 7 -->
@@ -41,10 +41,10 @@
       <!--<supportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}" />-->
     </application>
   </compatibility>
-  <!-- 表示應用程式為 DPI 感知，Windows 不會在 DPI 變高時自動
-       調整。Windows Presentation Foundation (WPF) 應用程式會自動感知 DPI，因此不需要
-       選擇加入。選擇加入這項設定之以 .NET Framework 4.6 為目標的 Windows Form 應用程式也
-       應該在其 app.config 中將 'EnableWindowsFormsHighDpiAutoResizing' 設定為 'true'。-->
+  <!-- Indicates that the application is DPI-aware and will not be automatically scaled by Windows at higher
+       DPIs. Windows Presentation Foundation (WPF) applications are automatically DPI-aware and do not need 
+       to opt in. Windows Forms applications targeting .NET Framework 4.6 that opt into this setting, should 
+       also set the 'EnableWindowsFormsHighDpiAutoResizing' setting to 'true' in their app.config. -->
   <!--
   <application xmlns="urn:schemas-microsoft-com:asm.v3">
     <windowsSettings>
@@ -52,7 +52,7 @@
     </windowsSettings>
   </application>
   -->
-  <!-- 啟用 Windows 通用控制項和對話方塊的佈景主題 (Windows XP 以後版本) -->
+  <!-- Enable themes for Windows common controls and dialogs (Windows XP and later) -->
   <!--
   <dependency>
     <dependentAssembly>

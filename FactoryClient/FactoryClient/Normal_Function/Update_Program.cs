@@ -51,7 +51,7 @@ namespace FactoryClient
         
         public void Finish()
         {
-            ZipFile.ExtractToDirectory(zip_location, local_location);
+            //ZipFile.ExtractToDirectory(zip_location, local_location);
             using (StreamWriter writer = new StreamWriter(program_shortcut))
             {
                 writer.WriteLine("[InternetShortcut]");
