@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.id = new System.Windows.Forms.TextBox();
             this.login_btn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -77,7 +78,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("新細明體", 15F);
+            this.label3.Font = new System.Drawing.Font("PMingLiU", 15F);
             this.label3.Location = new System.Drawing.Point(66, 33);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(129, 20);
@@ -95,7 +96,7 @@
             // Saver
             // 
             this.Saver.AutoSize = true;
-            this.Saver.Font = new System.Drawing.Font("新細明體", 30F);
+            this.Saver.Font = new System.Drawing.Font("PMingLiU", 30F);
             this.Saver.Location = new System.Drawing.Point(50, 226);
             this.Saver.Name = "Saver";
             this.Saver.Size = new System.Drawing.Size(177, 40);
@@ -127,6 +128,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.login_btn);
             this.Controls.Add(this.id);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
             this.Text = "Login";
             this.ResumeLayout(false);

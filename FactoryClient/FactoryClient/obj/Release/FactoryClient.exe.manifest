@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="FactoryClient.exe" size="78272">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="FactoryClient.exe" size="123328">
       <assemblyIdentity name="FactoryClient" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>5wHi9NkXViF65g0+/J8Ul+8ze0E=</dsig:DigestValue>
+        <dsig:DigestValue>8vs4fuzafmd5bu1RuCUsLfr3iSg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
