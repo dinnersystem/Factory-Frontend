@@ -13,3 +13,6 @@ D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Debug\FactoryClient.a
 D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Debug\FactoryClient.csproj.CopyComplete
 D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Debug\FactoryClient.exe
 D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Debug\FactoryClient.pdb
+D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Debug\FactoryClient.Form1.resources
+D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Debug\FactoryClient.Login.resources
+D:\github\Factory-Frontend\FactoryClient\FactoryClient\bin\Debug\FactoryClient.exe.config
