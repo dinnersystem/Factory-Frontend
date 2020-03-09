@@ -1,7 +1,3 @@
-D:\github\Factory-Frontend\FactoryClient\FactoryClient\bin\Release\FactoryClient.exe.manifest
-D:\github\Factory-Frontend\FactoryClient\FactoryClient\bin\Release\FactoryClient.application
-D:\github\Factory-Frontend\FactoryClient\FactoryClient\bin\Release\FactoryClient.exe
-D:\github\Factory-Frontend\FactoryClient\FactoryClient\bin\Release\FactoryClient.pdb
 D:\github\Factory-Frontend\FactoryClient\FactoryClient\bin\Release\Newtonsoft.Json.dll
 D:\github\Factory-Frontend\FactoryClient\FactoryClient\bin\Release\Newtonsoft.Json.xml
 D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Release\FactoryClient.Form1.resources
@@ -9,8 +5,12 @@ D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Release\FactoryClient
 D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Release\FactoryClient.Properties.Resources.resources
 D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Release\FactoryClient.csproj.GenerateResource.cache
 D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Release\FactoryClient.csproj.CoreCompileInputs.cache
-D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Release\FactoryClient.exe.manifest
-D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Release\FactoryClient.application
 D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Release\FactoryClient.csproj.CopyComplete
-D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Release\FactoryClient.exe
-D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Release\FactoryClient.pdb
+D:\github\Factory-Frontend\FactoryClient\FactoryClient\bin\Release\午餐系統.exe.manifest
+D:\github\Factory-Frontend\FactoryClient\FactoryClient\bin\Release\午餐系統.application
+D:\github\Factory-Frontend\FactoryClient\FactoryClient\bin\Release\午餐系統.exe
+D:\github\Factory-Frontend\FactoryClient\FactoryClient\bin\Release\午餐系統.pdb
+D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Release\午餐系統.exe.manifest
+D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Release\午餐系統.application
+D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Release\午餐系統.exe
+D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Release\午餐系統.pdb
