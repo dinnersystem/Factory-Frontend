@@ -11,9 +11,9 @@ namespace FactoryClient
 {
     class Update_Program
     {
-        public static string version = Properties.Settings.Default.version;
-        public static string remote_url = Properties.Settings.Default.remote_url;
-        public static string remote_name = Properties.Settings.Default.remote_name;
+        public static string version/* = Properties.Settings.Default.version*/;
+        public static string remote_url/* = Properties.Settings.Default.remote_url*/;
+        public static string remote_name/* = Properties.Settings.Default.remote_name*/;
         public static string remote_location;
         // Might cause serious problem if the config has been modified.
 

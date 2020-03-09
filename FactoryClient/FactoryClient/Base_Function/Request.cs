@@ -20,7 +20,7 @@ namespace FactoryClient
         public string uname = "";
         public string user_id = "";
         public List<string> valid_opers = new List<string>();
-        static string host = Properties.Settings.Default.remote_host;
+        static string host = "http://ssh.dinnersystem.com";
 
         public Request(string id, string pswd)
         {
