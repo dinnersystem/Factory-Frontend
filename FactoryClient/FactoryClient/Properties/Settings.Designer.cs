@@ -22,5 +22,17 @@ namespace FactoryClient.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string q {
+            get {
+                return ((string)(this["q"]));
+            }
+            set {
+                this["q"] = value;
+            }
+        }
     }
 }
