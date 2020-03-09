@@ -231,7 +231,11 @@ namespace FactoryClient
             });
         }
 
-        private void logout_Click(object sender, EventArgs e)   { Close(); }
+        private void logout_Click(object sender, EventArgs e)   {
+            Login form = new Login();
+            form.Show();
+            Hide();
+        }
 
         private void Error_Report_TextChanged(object sender, EventArgs e)
         {
