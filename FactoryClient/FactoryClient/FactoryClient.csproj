@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D811EC37-E2E3-499F-93FD-51D83F438B67}</ProjectGuid>
+    <ProjectGuid>{ADA528D0-D3C3-4948-8537-0C4D03878982}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>FactoryClient</RootNamespace>
     <AssemblyName>FactoryClient</AssemblyName>
@@ -50,13 +50,19 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>341B1BA3E81D8E7CE6DCAA97E92EEEE3268F96D4</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>518735EE56B97058411180B2D1D45DC11B2423B8</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestKeyFile>FactoryClient_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <PropertyGroup>
     <SignManifests>true</SignManifests>
@@ -93,6 +99,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="FactoryClient_TemporaryKey.pfx" />
+    <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

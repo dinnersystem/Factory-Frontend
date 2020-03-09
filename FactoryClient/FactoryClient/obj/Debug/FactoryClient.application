@@ -7,14 +7,14 @@
     <framework targetVersion="4.7.1" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="FactoryClient.exe.manifest" size="3487">
+    <dependentAssembly dependencyType="install" codebase="FactoryClient.exe.manifest" size="4595">
       <assemblyIdentity name="FactoryClient.exe" version="1.0.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>+v4OUsiHRRra0dJC+VIBU0AnE1Povx7XdND6+zrnsH4=</dsig:DigestValue>
+        <dsig:DigestValue>2LKqzT2/2ghJBmxO3KTvhKqL00RxQeIKfm3fR0Wj13s=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

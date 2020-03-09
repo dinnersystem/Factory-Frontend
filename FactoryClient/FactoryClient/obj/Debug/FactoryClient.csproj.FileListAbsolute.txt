@@ -7,6 +7,7 @@ D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Debug\FactoryClient.c
 D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Debug\FactoryClient.Properties.Resources.resources
 D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Debug\FactoryClient.csproj.GenerateResource.cache
 D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Debug\FactoryClient.csproj.CoreCompileInputs.cache
+D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Debug\FactoryClient.TrustInfo.xml
 D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Debug\FactoryClient.exe.manifest
 D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Debug\FactoryClient.application
 D:\github\Factory-Frontend\FactoryClient\FactoryClient\obj\Debug\FactoryClient.exe
