@@ -11,6 +11,7 @@ using Newtonsoft.Json.Linq;
 using System.Linq;
 using System.Configuration;
 using System.Collections.Specialized;
+using System.Web;
 
 namespace FactoryClient
 {
@@ -20,20 +21,44 @@ namespace FactoryClient
         public string uname = "";
         public string user_id = "";
         public List<string> valid_opers = new List<string>();
-        static string host = "http://ssh.dinnersystem.com";
+        static string host = "http://localhost/dinnersys_beta/backend/backend.php";
 
-        public Request(string id, string pswd)
+        public Request()
         {
-            string url = host + "/dinnersys_beta/backend/backend.php?cmd=login&device_id=factory_client&id=" + id + "&password=" + pswd;
+            string url = host + "/dinnersys_beta/backend/backend.php";
             HttpWebRequest req = (HttpWebRequest)HttpWebRequest.Create(url);
-            req.Method = "GET";
+            req.Method = "POST";
             WebResponse wr = req.GetResponse();
             cookieHeader = wr.Headers["Set-cookie"];
+        }
+
+        string Operate(Dictionary<string, string> data)
+        {
+            HttpWebRequest req = (HttpWebRequest)HttpWebRequest.Create(host);
+            req.Headers.Add("Cookie", cookieHeader);
+            req.Method = "POST";
+            req.ContentType = "application/x-www-form-urlencoded";
+            StringBuilder request_str = new StringBuilder();
+            foreach(var pair in data) request_str.Append(pair.Key + "=" + pair.Value + "&");
+            byte[] byteArray = Encoding.UTF8.GetBytes(request_str.ToString());
+            using (Stream reqStream = req.GetRequestStream()) reqStream.Write(byteArray, 0, byteArray.Length - 1);
+            WebResponse wr = req.GetResponse();
             StreamReader readStream = new StreamReader(wr.GetResponseStream(), Encoding.GetEncoding("utf-8"));
-            string reponse = readStream.ReadToEnd();
+            string ret = readStream.ReadToEnd();
+            wr.Close();
+            return ret;
+        }
+
+        public JArray Get_Organization() { return JsonConvert.DeserializeObject<JArray>(Operate(new Dictionary<string, string> { { "cmd", "show_organization" } })); }
+
+        public void Login(string id, string password, string org_id)
+        {
+            string response = Operate(new Dictionary<string, string> {
+                { "cmd", "login" },{ "device_id", "factory_client" },{ "id", id },{ "password", password },{ "org_id", org_id }
+            });
             JObject obj;
-            try { obj = JsonConvert.DeserializeObject<JObject>(reponse); }
-            catch (Exception e) { throw new Exception(reponse); }
+            try { obj = JsonConvert.DeserializeObject<JObject>(response); }
+            catch (Exception e) { throw new Exception(response); }
 
             bool able = false;
             foreach (JToken item in obj["valid_oper"])
@@ -43,32 +68,21 @@ namespace FactoryClient
                 able |= (item.ToString(Newtonsoft.Json.Formatting.None) == "\"select_other\"");
                 valid_opers.Add(item.ToString(Newtonsoft.Json.Formatting.None));
             }
-            user_id = obj["id"].ToString();
-            uname = obj["name"].ToString();
+            user_id = obj["id"].ToString(); uname = obj["name"].ToString();
             if (!able) throw new Exception("Access denied");
         }
 
         public JArray Get_Order(string lower_bound, string upper_bound, bool model = false)
         {
-            string url = host + "/dinnersys_beta/backend/backend.php?cmd=select_" + (model ? "other" : "facto") +
-                "&esti_start=" + lower_bound + "&esti_end=" + upper_bound + (model ? "&history=true" : "");
-            if (model && (from item in valid_opers where item == "\"select_other\"" select item).Count() == 0)
-                throw new Exception("Access denied.");
-
-            HttpWebRequest req = (HttpWebRequest)HttpWebRequest.Create(url);
-            req.Headers.Add("Cookie", cookieHeader);
-            WebResponse wr = req.GetResponse();
-            Encoding encode = System.Text.Encoding.GetEncoding("utf-8");
-            StreamReader readStream = new StreamReader(wr.GetResponseStream(), encode);
-            string str = readStream.ReadToEnd();
-            JArray array = JsonConvert.DeserializeObject<JArray>(str);
+            JArray array = JsonConvert.DeserializeObject<JArray>(Operate(new Dictionary<string, string> {
+                { "cmd", "select_facto" },{ "esti_start", lower_bound },{ "esti_end", upper_bound },{ "history", "true" }
+            }));
             JArray ret = new JArray();
             foreach (JToken order in array)
             {
                 bool alive = false;
                 foreach (JToken payment in order["money"]["payment"])
-                    alive |= (payment["name"].ToString(Formatting.None) == "\"cafeteria\"" && payment["paid"].ToString(Formatting.None) == "\"true\"") ||
-                        (payment["name"].ToString(Formatting.None) == "\"payment\"" && payment["paid"].ToString(Formatting.None) == "\"true\"");
+                    alive |= (payment["name"].ToString(Formatting.None) == "\"payment\"" && payment["paid"].ToString(Formatting.None) == "\"true\"");
                 if (alive) ret.Add(order);
             }
             return ret;
@@ -76,54 +90,21 @@ namespace FactoryClient
 
         public JArray Get_Dish()
         {
-            string url = host + "/dinnersys_beta/backend/backend.php?cmd=show_dish&sortby=dish_id";
-            HttpWebRequest req = (HttpWebRequest)HttpWebRequest.Create(url);
-            req.Headers.Add("Cookie", cookieHeader);
-            WebResponse wr = req.GetResponse();
-            Encoding encode = System.Text.Encoding.GetEncoding("utf-8");
-            StreamReader readStream = new StreamReader(wr.GetResponseStream(), encode);
-            string str = readStream.ReadToEnd();
-            try {
-                JArray array = JsonConvert.DeserializeObject<JArray>(str);
-                return array;
-            } catch(Exception e) {
-                throw new Exception(e.ToString() + "\nCurrentJson:" + str);
-            }
+            string str = Operate(new Dictionary<string, string> { { "cmd", "show_dish" }, { "sortby", "dish_id" } });
+            try { JArray array = JsonConvert.DeserializeObject<JArray>(str); return array; }
+            catch (Exception e) { throw new Exception(e.ToString() + "\nCurrentJson:" + str); }
         }
 
-        public void Update_Dish(List<string> suffix, UpdateProgress invoker)
+        public void Update_Dish(List<Dictionary<string ,string> > suffix, UpdateProgress invoker)
         {
             int count = 0;
-            foreach (string tmp in suffix)
+            foreach (var tmp in suffix)
             {
-                string url = host + "/dinnersys_beta/backend/backend.php?cmd=update_dish" + tmp;
-                HttpWebRequest req = (HttpWebRequest)HttpWebRequest.Create(url);
-                req.Headers.Add("Cookie", cookieHeader);
-                WebResponse wr = req.GetResponse();
-                StreamReader readStream = new StreamReader(wr.GetResponseStream(), Encoding.GetEncoding("utf-8"));
-                string resp = readStream.ReadToEnd();
-                if (resp != "Nothing to update." && resp != "Successfully updated food.")
-                    throw new Exception("Unable to update dish: " + resp);
-                wr.Close();
-                invoker((int)Math.Ceiling((double)count / suffix.Count * 100));
-                count += 1;
+                tmp["cmd"] = "update_dish";
+                string resp = Operate(tmp);
+                if (resp != "Nothing to update." && resp != "Successfully updated food.") throw new Exception("Unable to update dish: " + resp);
+                invoker((int)Math.Ceiling((double)count++ / suffix.Count * 100));
             }
-        }
-
-        public List<JToken> Get_Version()
-        {
-            string url = host + "/dinnersys_beta/frontend/u_move_u_dead/version.txt";
-            HttpWebRequest req = (HttpWebRequest)HttpWebRequest.Create(url);
-            req.Headers.Add("Cookie", cookieHeader);
-            WebResponse wr = req.GetResponse();
-            Encoding encode = System.Text.Encoding.GetEncoding("utf-8");
-            StreamReader readStream = new StreamReader(wr.GetResponseStream(), encode);
-            string str = readStream.ReadToEnd();
-            JObject array = JsonConvert.DeserializeObject<JObject>(str);
-            List<JToken> version = new List<JToken>();
-            foreach (JToken v in array["factory"])
-                version.Add(v);
-            return version;
         }
 
         public void Report_Error(string error)

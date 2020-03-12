@@ -8,16 +8,6 @@ using System.Windows.Forms;
 
 namespace Compatible_Extend
 {
-    class Task_Extend
-    {
-        public static void Run(Action o) { new Thread(new ThreadStart(o)).Start();  }
-    }
-
-    class WebUtility_Extend
-    {
-        public static string UrlEncode(string s) {
-            string str = Uri.EscapeDataString(s);
-            return Uri.EscapeDataString(s);
-        }
-    }
+    class Task_Extend { public static void Run(Action o) { new Thread(new ThreadStart(o)).Start();  } }
+    class WebUtility_Extend { public static string UrlEncode(string s) { return Uri.EscapeDataString(s); } }
 }
