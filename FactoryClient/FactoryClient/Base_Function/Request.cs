@@ -21,12 +21,11 @@ namespace FactoryClient
         public string uname = "";
         public string user_id = "";
         public List<string> valid_opers = new List<string>();
-        static string host = "http://localhost/dinnersys_beta/backend/backend.php";
+        static string host = "https://ssh.dinnersystem.com/dinnersys_beta/backend/backend.php";
 
         public Request()
         {
-            string url = host + "/dinnersys_beta/backend/backend.php";
-            HttpWebRequest req = (HttpWebRequest)HttpWebRequest.Create(url);
+            HttpWebRequest req = (HttpWebRequest)HttpWebRequest.Create(host);
             req.Method = "POST";
             WebResponse wr = req.GetResponse();
             cookieHeader = wr.Headers["Set-cookie"];

@@ -98,7 +98,7 @@ namespace FactoryClient
 
 
 
-    class ExcelStream
+    /*class ExcelStream
     {
         string path;
         public ExcelStream(string path, bool reset = true)
@@ -127,7 +127,6 @@ namespace FactoryClient
             Book = _Excel.Workbooks.Open(path);
             Sheet = Book.Sheets[1];
 
-            /* Reset the file */
             if (reset)
             {
                 _Excel.ActiveSheet.ResetAllPageBreaks();
@@ -195,5 +194,5 @@ namespace FactoryClient
             workbook = null; sheet = null;
             return ret;
         }
-    }
+    }*/
 }

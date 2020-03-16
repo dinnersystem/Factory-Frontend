@@ -31,3 +31,8 @@ D:\Projects\c#\Factory-Frontend\FactoryClient\FactoryClient\obj\Debug\午餐系�
 D:\Projects\c#\Factory-Frontend\FactoryClient\FactoryClient\obj\Debug\FactoryClient.csproj.CopyComplete
 D:\Projects\c#\Factory-Frontend\FactoryClient\FactoryClient\obj\Debug\午餐系統.exe
 D:\Projects\c#\Factory-Frontend\FactoryClient\FactoryClient\obj\Debug\午餐系統.pdb
+D:\github\Factory-Frontend\FactoryClient\FactoryClient\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\github\Factory-Frontend\FactoryClient\FactoryClient\bin\Debug\NPOI.dll
+D:\github\Factory-Frontend\FactoryClient\FactoryClient\bin\Debug\NPOI.OOXML.dll
+D:\github\Factory-Frontend\FactoryClient\FactoryClient\bin\Debug\NPOI.OpenXml4Net.dll
+D:\github\Factory-Frontend\FactoryClient\FactoryClient\bin\Debug\NPOI.OpenXmlFormats.dll

@@ -109,7 +109,7 @@
             this.organization.Name = "organization";
             this.organization.Size = new System.Drawing.Size(131, 20);
             this.organization.TabIndex = 7;
-            this.organization.Text = "不用選學校沒關係";
+            this.organization.Text = "(默認板橋高中)";
             this.organization.SelectedIndexChanged += new System.EventHandler(this.organization_SelectedIndexChanged);
             // 
             // Login
