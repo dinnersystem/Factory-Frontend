@@ -36,3 +36,8 @@ D:\github\Factory-Frontend\FactoryClient\FactoryClient\bin\Debug\NPOI.dll
 D:\github\Factory-Frontend\FactoryClient\FactoryClient\bin\Debug\NPOI.OOXML.dll
 D:\github\Factory-Frontend\FactoryClient\FactoryClient\bin\Debug\NPOI.OpenXml4Net.dll
 D:\github\Factory-Frontend\FactoryClient\FactoryClient\bin\Debug\NPOI.OpenXmlFormats.dll
+D:\Projects\c#\Factory-Frontend\FactoryClient\FactoryClient\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\Projects\c#\Factory-Frontend\FactoryClient\FactoryClient\bin\Debug\NPOI.dll
+D:\Projects\c#\Factory-Frontend\FactoryClient\FactoryClient\bin\Debug\NPOI.OOXML.dll
+D:\Projects\c#\Factory-Frontend\FactoryClient\FactoryClient\bin\Debug\NPOI.OpenXml4Net.dll
+D:\Projects\c#\Factory-Frontend\FactoryClient\FactoryClient\bin\Debug\NPOI.OpenXmlFormats.dll
