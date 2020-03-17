@@ -14,14 +14,14 @@
     <framework targetVersion="4.0" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="午餐系統.exe.manifest" size="7483">
+    <dependentAssembly dependencyType="install" codebase="午餐系統.exe.manifest" size="7510">
       <assemblyIdentity name="午餐系統.exe" version="1.0.0.12" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>kMcOn1ESgAX2ZJ3GXFyji8U9vDM=</dsig:DigestValue>
+        <dsig:DigestValue>+MTQt7/wYD8zGXqttoGocR+czoI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
