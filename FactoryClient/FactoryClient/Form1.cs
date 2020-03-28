@@ -17,6 +17,7 @@ namespace FactoryClient
     {
         Request req;
         Normal_Function.Download_Template template = new Normal_Function.Download_Template();
+        string BaseDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\點餐系統資料\\";
         public Form1(Request req)
         {
             InitializeComponent();
@@ -33,10 +34,11 @@ namespace FactoryClient
             DateTime end = DateTime.Parse(DateTime.Now.ToString("yyyy-MM-dd") + " 16:00:00");
             scale_start.Value = custom_start.Value = money_start.Value = start;
             scale_end.Value = custom_end.Value = money_end.Value = end;
-            menu_file.Text = AppDomain.CurrentDomain.BaseDirectory + "菜單.xlsx";
-            scale_file.Text = AppDomain.CurrentDomain.BaseDirectory + "規模化報表.xlsx";
-            custom_file.Text = AppDomain.CurrentDomain.BaseDirectory + "精緻化報表.xlsx";
-            money_file.Text = AppDomain.CurrentDomain.BaseDirectory + "金額報表.xlsx";
+            menu_file.Text = BaseDirectory + "菜單.xlsx";
+            scale_file.Text = BaseDirectory + "規模化報表.xlsx";
+            custom_file.Text = BaseDirectory + "精緻化報表.xlsx";
+            money_file.Text = BaseDirectory + "金額報表.xlsx";
+            System.IO.Directory.CreateDirectory(BaseDirectory);
         }
 
         #region open_file
@@ -229,7 +231,11 @@ namespace FactoryClient
             });
         }
 
-        private void logout_Click(object sender, EventArgs e)   { Close(); }
+        private void logout_Click(object sender, EventArgs e)   {
+            Login form = new Login();
+            form.Show();
+            Hide();
+        }
 
         private void Error_Report_TextChanged(object sender, EventArgs e)
         {
