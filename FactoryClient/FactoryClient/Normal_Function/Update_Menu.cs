@@ -66,7 +66,7 @@ namespace FactoryClient
          */
         public void Upload(UpdateProgress invoker)
         {
-            List<string> suffix = new List<string>();
+            List<Dictionary<string, string> > suffix = new List<Dictionary<string, string> >();
             List<List<string>> data = excel.GetRow();
             foreach (List<string> row in data)
             {
@@ -77,12 +77,14 @@ namespace FactoryClient
                 string vege = (row[3] == "葷" ? "MEAT" : "PURE");
                 string idle = (row[4] == "是" ? "true" : "false");
                 string limit = row[5];
-                suffix.Add("&id=" + WebUtility_Extend.UrlEncode(id) + 
-                    "&dish_name=" + WebUtility_Extend.UrlEncode(dname) + 
-                    "&charge_sum=" + WebUtility_Extend.UrlEncode(charge) + 
-                    "&is_vege=" + WebUtility_Extend.UrlEncode(vege) + 
-                    "&is_idle=" + WebUtility_Extend.UrlEncode(idle) + 
-                    "&daily_limit=" + WebUtility_Extend.UrlEncode(limit));
+                suffix.Add(new Dictionary<string, string>{
+                    { "id", WebUtility_Extend.UrlEncode(id) },
+                    { "dish_name", WebUtility_Extend.UrlEncode(dname) },
+                    { "charge_sum", WebUtility_Extend.UrlEncode(charge) },
+                    { "is_vege", WebUtility_Extend.UrlEncode(vege) },
+                    { "is_idle", WebUtility_Extend.UrlEncode(idle) },
+                    { "daily_limit", WebUtility_Extend.UrlEncode(limit) }
+                });
             }
             req.Update_Dish(suffix , invoker);
         }

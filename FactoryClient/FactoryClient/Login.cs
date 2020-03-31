@@ -6,34 +6,37 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Newtonsoft.Json.Linq;
+using System.Collections;
 
 namespace FactoryClient
 {
     public partial class Login : Form
     {
-        public Login()
-        {
-            InitializeComponent();
-        }
+        Request req = new Request();
+        JArray org; Dictionary<string, string> name_to_id = new Dictionary<string, string>();
+        string org_id = "1";
+        public Login() { InitializeComponent(); }
 
         private void login_btn_Click(object sender, EventArgs e)
         {
-            Request req;
-            try { req = new Request(id.Text, password.Text); }
+            try { req.Login(id.Text, password.Text, org_id); }
             catch (Exception ex) { MessageBox.Show(ex.Message); return; }
             Form1 form = new Form1(req);
             form.Show();
             Hide();
         }
 
-        private void SaveMe_Click(object sender, EventArgs e)
+        private void Login_Load(object sender, EventArgs e)
         {
-            this.Height += (this.Height == 225 ? 100 : 0 );
+            org = req.Get_Organization();
+            foreach (JObject item in org)
+            {
+                organization.Items.Add(item["name"].ToObject<string>());
+                name_to_id[item["name"].ToObject<string>()] = item["id"].ToObject<string>();
+            }
         }
 
-        private void Saver_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            System.Diagnostics.Process.Start("https://forms.gle/5vF8q7LUXUtXySAeA");
-        }
+        private void organization_SelectedIndexChanged(object sender, EventArgs e) { org_id = name_to_id[organization.Text]; }
     }
 }
