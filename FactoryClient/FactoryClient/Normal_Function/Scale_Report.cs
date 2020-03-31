@@ -83,7 +83,7 @@ namespace FactoryClient
             ret["總表"] = new int[1000];
             foreach (JToken item in data)
             {
-                string did = item["dish"][0].ToString();
+                string did = item["dish"][0]["dish_id"].ToObject<string>();
                 if (!dishIDs.Contains(did)) continue;
                 string cno = item["user"]["class"]["class_no"].ToString();
                 if (!ret.ContainsKey(cno)) ret[cno] = new int[1000];
