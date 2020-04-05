@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <PublishUrlHistory>ftps://ssh.dinnersystem.com/fclient/|ftps://ssh.dinnersystem.com/|publish\</PublishUrlHistory>
-    <InstallUrlHistory>https://dinnersystem.com/media/fclient/|https://dinnersystem.com/dinnersys_beta/fclient/</InstallUrlHistory>
+    <PublishUrlHistory>publish\|ftps://ssh.dinnersystem.com/fclient/|ftps://ssh.dinnersystem.com/</PublishUrlHistory>
+    <InstallUrlHistory>https://dinnersystem.com/dinnersys_beta/fclient/|https://dinnersystem.com/dinnersys_beta/fclient/setup.exe/|https://dinnersystem.com/media/fclient/</InstallUrlHistory>
     <SupportUrlHistory />
     <UpdateUrlHistory />
     <BootstrapperUrlHistory />
