@@ -85,7 +85,7 @@ namespace FactoryClient
                     });
                     if (sender.Equals(download_menu)) menu_update.Download(progress);
                     else menu_update.Upload(progress);
-                    excel.Close();
+                    excel.Flush();
                     if (sender.Equals(download_menu)) Process.Start(menu_file.Text);
                     Invoke((MethodInvoker)(() =>
                     {
@@ -131,7 +131,7 @@ namespace FactoryClient
                                 Scale_Progress_Show.Text = "目前進度:" + value.ToString() + "%";
                             }));
                         }));
-                    excel.Close();
+                    excel.Flush();
                     Process.Start(scale_file.Text);
                     Invoke((MethodInvoker)(() => original()));
                 }
@@ -173,7 +173,7 @@ namespace FactoryClient
                                 Custom_Progress_Show.Text = "目前進度:" + value.ToString() + "%";
                             }));
                         }));
-                    excel.Close();
+                    excel.Flush();
                     Process.Start(custom_file.Text);
                     Invoke((MethodInvoker)(() => original()));
                 }
@@ -215,7 +215,7 @@ namespace FactoryClient
                                 Money_Progress_Show.Text = "目前進度:" + value.ToString() + "%";
                             }));
                         }));
-                    excel.Close();
+                    excel.Flush();
                     Process.Start(money_file.Text);
                     Invoke((MethodInvoker)(() => original()));
                 }
