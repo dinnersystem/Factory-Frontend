@@ -11,17 +11,17 @@
     <deploymentProvider codebase="https://dinnersystem.com/dinnersys_beta/fclient/%E5%8D%88%E9%A4%90%E7%B3%BB%E7%B5%B1.application" />
   </deployment>
   <compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">
-    <framework targetVersion="4.0" profile="Full" supportedRuntime="4.0.30319" />
+    <framework targetVersion="4.8" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="午餐系統.exe.manifest" size="7483">
+    <dependentAssembly dependencyType="install" codebase="午餐系統.exe.manifest" size="12222">
       <assemblyIdentity name="午餐系統.exe" version="1.0.0.16" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>xkrmKHhh+bf8H4+9oWexSgXUzXA=</dsig:DigestValue>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>LTc/XDZbHTxkDgat3vUBuYqpgcc/3AhJgC18ACgXpGY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

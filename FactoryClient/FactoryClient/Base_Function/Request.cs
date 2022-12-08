@@ -53,19 +53,19 @@ namespace FactoryClient
         public void Login(string id, string password, string org_id)
         {
             string response = Operate(new Dictionary<string, string> {
-                { "cmd", "login" },{ "device_id", "factory_client" },{ "id", id },{ "password", password },{ "org_id", org_id }
+                { "cmd", "login" },{ "device_id", "factory_client_"+Environment.MachineName },{ "id", id },{ "password", password },{ "org_id", org_id }
             });
             JObject obj;
             try { obj = JsonConvert.DeserializeObject<JObject>(response); }
-            catch (Exception e) { throw new Exception(response); }
+            catch (Exception) { throw new Exception(response); }
 
             bool able = false;
             foreach (JToken item in obj["valid_oper"])
             {
-                able |= (item.ToString(Newtonsoft.Json.Formatting.None) == "\"update_dish\"");
-                able |= (item.ToString(Newtonsoft.Json.Formatting.None) == "\"select_facto\"");
-                able |= (item.ToString(Newtonsoft.Json.Formatting.None) == "\"select_other\"");
-                valid_opers.Add(item.ToString(Newtonsoft.Json.Formatting.None));
+                able |= (item.ToString(Formatting.None) == "\"update_dish\"");
+                able |= (item.ToString(Formatting.None) == "\"select_facto\"");
+                able |= (item.ToString(Formatting.None) == "\"select_other\"");
+                valid_opers.Add(item.ToString(Formatting.None));
             }
             user_id = obj["id"].ToString(); uname = obj["name"].ToString();
             if (!able) throw new Exception("Access denied");
